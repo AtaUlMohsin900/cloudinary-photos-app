@@ -12,26 +12,12 @@ export type UploadResult = {
 };
 
 export default function Home() {
-  const [imageId, setImageId] = useState("");
+  
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <CldUploadButton
-        onUpload={(result: UploadResult) => {
-          setImageId(result.info.public_id);
-        }}
-        uploadPreset="vojr9d9b"
-      />
-
-      {imageId && (
-        <CldImage
-          width="500"
-          height="300"
-          src={imageId}
-          sizes="100vw"
-          alt="Description of my image"
-        />
-      )}
+     <CldUploadButton uploadPreset="svpsghx2" />
+      
     </main>
   );
 }
